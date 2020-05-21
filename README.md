@@ -1,4 +1,6 @@
-# ejemplo3
+# Ejemplo3 con VueJS
+
+Ejemplo de conexion a API con Axios, usando bootstrap y Vuejs
 
 ## Project setup
 ```
@@ -22,3 +24,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
