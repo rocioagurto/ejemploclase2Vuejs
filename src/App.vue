@@ -1,16 +1,19 @@
 <template>
   <div class="container">
-   <h1>Muestra de Series</h1>
-    <series></series>
+   <h1>Series TV</h1>
+    <series :informacion="series"></series>
+     <modal v-for="(item,index) in series" :key="index" :imagen="item.image.medium" :descrip="item.summary" :nombre="item.name"></modal>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
 import Series from './components/Series.vue';
+ import Modal from './components/Modal.vue';
 
 export default {
   name: 'App',
+
  data(){
    return {
      series :[]
@@ -25,7 +28,8 @@ export default {
     .catch (error => console.log(error))
   },
   components: {
-    Series
+    Series,
+    Modal
   }
 }
 </script>
